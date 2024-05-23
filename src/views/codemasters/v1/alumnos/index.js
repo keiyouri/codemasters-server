@@ -1,8 +1,7 @@
-'use strict'
+const express = require('express');
+const router = express.Router();
+const alumnosController = require('../../../../controllers/alumnos');
 
-import { Router } from 'express'
-let router = Router()
+router.get('/', alumnosController.getAlumnos);
 
-// TODO
-
-export default router
+module.exports = router;
